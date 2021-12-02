@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.NewsDetailsActivity">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView android:id="@+id/selected_news_image"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:src="@drawable/default_news_image"
+        android:scaleType="centerCrop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:clickable="true"/>
+
+    <TextView android:id="@+id/selected_news_published_at"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Время публикации"
+        android:textColor="@color/white"
+        android:drawableLeft="@drawable/ic_clock"
+        android:textSize="18dp"
+        android:padding="5dp"
+        android:layout_marginTop="-45dp"
+        android:layout_marginLeft="10dp"
+        android:drawablePadding="7dp"
+        android:drawableTint="@color/white"
+        android:background="@drawable/published_at_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selected_news_image"/>
+
+    <TextView android:id="@+id/selected_news_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Заголовок"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selected_news_image"/>
+
+    <TextView android:id="@+id/selected_news_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="5dp"
+        android:textSize="16dp"
+        android:text="Описание"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        app:layout_constraintTop_toBottomOf="@id/selected_news_title"/>
+    
+    <TextView android:id="@+id/selected_news_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Контент"
+        android:textSize="18dp"
+        android:background="@drawable/content_bg"
+        android:textColor="@color/black"
+        android:layout_marginTop="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:padding="5dp"
+        android:textAlignment="inherit"
+        app:layout_constraintTop_toBottomOf="@+id/selected_news_description"/>
+
+    <TextView android:id="@+id/selected_news_read_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/read_more"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="17dp"
+        android:textColor="@color/blue"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="15dp"
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/selected_news_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
